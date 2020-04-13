@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lectione 12</title>
+</head>
+<body>
+	Вам нужно переделать свое прошлое домашнее задание, на основе новых знаний по пройденной теме
+
+
+
+<script>
+function user (Name,lastName,bday,assessments,attendance) {
+		this.Name = Name;
+		this.lastName = lastName;
+		this.bday = bday
+		this.assessments = assessments;
+		this.attendance = attendance;
+		
+}
+let NewUser = new user('Kirill','lokash','27/08/2001', [], new Array(30));
+
+	user.prototype.present = function () {
+		//attendance.unshift( 'true' );
+		return this.attendance.unshift('true');
+	};
+
+	user.prototype.absent = function () {
+		this.attendance.unshift( 'false' ); 
+	};
+	user.prototype.mark = function() {
+		var result = prompt('Введите число');
+		this.assessments.unshift(result);
+		console.log(this.assessments)
+			if (this.attendance.length > 30  )	{
+				this.attendance.splice(30, 100);
+				//console.log(attendance)
+
+			} else if( this.assessments.length > 30 ){
+				this.assessments.splice(30, 100);
+				//console.log(assessments)
+			} else {
+				console.log('длина массивов < 30');
+			}
+	};
+	//console.log(User.present());
+	//User.present();
+	//User.present();
+
+	user.prototype.summary = function () {
+		 var length = this.assessments.length;
+		 var sum = 0;
+		//console.log(sum)
+		for(var i = 0; i < length ; i++) {
+			var elem = +this.assessments[i];
+			//var b = +assessments[i+1];
+			sum += elem;
+			//console.log(this.assessments[i])
+		 }
+
+		console.log( 'Сумма чиссел = ' + sum );
+		//console.log(result);
+
+
+		var length2 = this.attendance.length;
+		var res = 1;
+		for ( var i = 0; i <= length2 -1; i++) {
+			var z = this.attendance[i];
+			
+			//console.log(z)
+			if ( z === 'true' ) {
+				res++;
+			}
+			else {
+				//console.log('false');
+				
+			}
+		}
+		var result2 = (res - 1) / length2;
+		console.log( 'Количество true элементов = ' + res );
+		console.log( res-1 +' / ' + length2 + ' = ' + result2 );
+		var result =  sum / length;
+		console.log( sum + ' / ' + length + ' = ' + result );
+
+		if (result2 >= 0.9 && result >= 9 ) {
+			alert("Ути какой молодчинка!")
+		} else if (result2 < 0.9 && result >= 9  || result2 >= 0.9 && result < 9 ) {
+			alert("Норм, но можно лучше");
+		} else {
+			alert("Редиска!");
+		}
+
+		
+
+	}
+	
+	
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	NewUser.mark();
+	
+
+	// console.log(mark());
+	// console.log(mark());
+	// console.log(mark());
+
+
+
+	
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.present()
+	NewUser.present();
+	NewUser.present();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.present();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+	NewUser.absent();
+
+//console.log(this.attendance);
+			if (this.attendance > 30  )	{
+				this.attendance.splice(30, 100);
+				//console.log(attendance)
+
+			} else if( this.assessments > 30 ){
+				this.assessments.splice(30, 100);
+				//console.log(assessments)
+			} else {
+				console.log('длина массивов < 30');
+			}
+
+		
+NewUser.summary();
+
+console.log(NewUser);
+
+//console.log(new user('Kirill2','lokash2','27/08/2001', [4,3,2,9,10,10,0,4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], new Array(30)));
+
+</script>
+</body>
+</html>
